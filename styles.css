@@ -1,0 +1,548 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #a0cafa;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    width: 70%;
+    background: rgba(255, 255, 255, );
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-left: 15%;
+    margin-top: 10px;
+    border-radius: 40px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #62b8f2;
+    /* Change color when hovered */
+}
+
+.logo {
+
+    font-size: 12px;
+    background-color: white;
+    padding: 8px 25px;
+    border-radius: 40px;
+}
+
+
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+    background-color: white;
+    padding: 8px 25px;
+    border-radius: 40px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    color: #62b8f2;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    background: url('assets/bg3.jpg') no-repeat center center/cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.quote {
+    margin-top: 15%;
+    margin-right: 15%;
+    margin-left: 15%;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: #000000;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: end;
+
+}
+
+input {
+    height: 50px;
+
+    padding: 0px 10px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: rgba(208, 208, 208, 0.5);
+    color: #000000;
+    outline: none;
+    transition: 0.3s;
+}
+
+::placeholder {
+    color: #000000;
+    font-size: 18px;
+}
+
+input:hover {
+    border-color: #3498db;
+
+}
+
+input:focus {
+    border-color: #3498db;
+
+}
+
+
+/* Weather Details */
+.weather-details {
+    background-image: url(assets/bg5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+}
+
+.weather-info {
+    height: 80vh;
+    display: flex;
+    
+    justify-content: space-between;
+    
+    text-align: center;
+}
+.weather-info .left-info{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.weather-info h2{
+     font-size: 40px;
+     margin: 20px;
+}
+#current-temp{
+    margin: 10px;
+    font-size: 25px;
+}
+#min-max-temp{
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+/* View More Button */
+#view-more-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#view-more-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Details Section */
+.details-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    margin-right: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 200px;
+    line-height: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+.detail-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #888888;
+}
+
+.detail-box img {
+    width: 70px;
+    padding: 10px;
+
+}
+.detail-box h3{
+    padding: 10px;
+
+}
+.detail-box p{
+    padding: 10px;
+    text-shadow: 2px 2px 20px black;
+}
+#view-more-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#view-more-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+
+
+/* Forecast Sections */
+.forecast-section .hidden {
+    display: none;
+}
+
+.forecast-section {
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+   /* for hourly weather forecast */
+   .forecast-section{
+    background-color: #c3c3c3;
+   }
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    font-size: 18px;
+    padding: 20px;
+    
+   
+}
+
+.hourly-box {
+    min-width: 100px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin: 0 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.hour-box {
+    padding-right: 10px;
+}
+
+.forecast-section h2{
+    padding: 40px;
+}
+
+  /* for seven days weather forecast */
+.grid-container {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 100px;   
+}
+.grid-container h2{
+    padding: 10px;
+}
+.grid-container div {
+   
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+.grid-container div:hover{
+    transform: scale(1.1);  /* Zoom in on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  /* Increase shadow for emphasis */
+    background-color: #dc1b62;
+}
+
+
+
+/* About & Contact Sections */
+.about-section {
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 40px;
+    padding: 20px;
+}
+
+.about-section .subline {
+    background-color: #2980b9;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    font-size: 15px;
+    border-radius: 40px;
+    margin: 0 20px;
+    box-shadow: 5px 5px 10px #888888;
+    display: inline-block;
+    text-shadow: 1px 1px 10px black;
+}
+
+.about-section .key-features {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.feature-box1 {
+    background-color: #3EFE55;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .key-features .feature-box1 h3 {
+    text-shadow: 3px 3px 20px #000000;
+    margin-bottom: 10px;
+}
+
+.about-section .key-features .feature-box1 p {
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
+   
+    box-shadow: 1px 1px 4px black;
+}
+
+
+.feature-box2 {
+    background-color: #80ced6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .key-features .feature-box2 h3 {
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 20px #000000;
+}
+
+.about-section .key-features .feature-box2 p {
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.feature-box3 {
+    background-color: #FF3D3D;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .key-features .feature-box3 h3 {
+    text-shadow: 3px 3px 20px #000000;
+    margin-bottom: 10px;
+}
+
+.about-section .key-features .feature-box3 p {
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Smooth Scroll for 'View More Details' Button */
+html {
+    scroll-behavior: smooth;
+}
+
+.form{
+    border: 1px solid black;
+    height: 100vh;
+    width: 100%;
+    background-color: #e01f1f;
+    padding: 50px;
+    text-align: center;
+}
+.contact-section h2 {
+    margin: 50px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* here we are going to add sign in page  */
+/* Login Page Styles */
+.login-section {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #2980b9;
+}
+
+.login-form a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+#location-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#location-btn:hover {
+    background-color: #2980b9;
+}
+
